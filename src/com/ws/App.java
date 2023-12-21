@@ -1,8 +1,9 @@
-package wise_saying_2023_12;
+package com.ws;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import com.ws.wisesasying.entity.WiseSaying;
 
 public class App {
 	private Scanner sc;

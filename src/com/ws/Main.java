@@ -1,4 +1,4 @@
-package wise_saying_2023_12;
+package com.ws;
 
 import java.util.Scanner;
 
