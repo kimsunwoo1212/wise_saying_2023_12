@@ -1,4 +1,4 @@
-package com.ws.wisesasying.entity;
+package com.ws.wiseSaying.entity;
 
 public class WiseSaying {
 	private int id;
