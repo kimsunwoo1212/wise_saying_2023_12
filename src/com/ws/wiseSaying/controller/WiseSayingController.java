@@ -16,35 +16,36 @@ public class WiseSayingController {
 	}
 
 	public void write() {
-		System.out.print("명언 : ");
+		System.out.print("명언 : "); //등록 입력시 출력
 		String content = Container.getScanner().nextLine().trim();
-		System.out.print("작가 : ");
+		System.out.print("작가 : "); // 명언 다음에 출력
 		String author = Container.getScanner().nextLine().trim();
 
-		int id = wiseSayingService.write(content, author);
+		int id = wiseSayingService.write(content, author); // int 데이터에 id라는 변수에 와이즈세잉서비스.write값을 
+		//넣겠다 인자는 content, author
 
-		System.out.printf("%d번 명언이 등록되었습니다.\n", id);
+		System.out.printf("%d번 명언이 등록되었습니다.\n", id); // 출력
 	}
 
 	public void list() {
 		List<WiseSaying> wiseSayings = wiseSayingService.findAll();
+		// 리스트 와이즈세잉 데이터, 와이즈세잉 변수를 만들고 와이즈세잉서비스.findAll 을 하고 와이즈세잉 변수에 넣겠다
+		System.out.println("번호  /  작가  /  명언  "); //출력
+		System.out.println("=".repeat(30)); //출력
 
-		System.out.println("번호  /  작가  /  명언  ");
-		System.out.println("=".repeat(30));
-
-		for (int i = wiseSayings.size() - 1; i >= 0; i--) {
+		for (int i = wiseSayings.size() - 1; i >= 0; i--) {	//반복문 
 			WiseSaying ws = wiseSayings.get(i);
-
+			
 			System.out.printf("%d  /  %s  /  %s\n", ws.getId(), ws.getAuthor(), ws.getContent());
 		}
 	}
 
-	public void remove(Rq rq) {
+	public void remove(Rq rq) { //삭제 
 
-		int id = rq.getIntParam("id", -1);
+		int id = rq.getIntParam("id", -1); //int id 라는 변수에 id== -1 값을 넣는다
 
 		if (id == -1) {
-			System.out.println("id(정수)를 제대로 입력해주세요");
+			System.out.println("id(정수)를 제대로 입력해주세요"); //id 값이 -1일때 출력
 			return;
 		}
 		// 입력된 id와 일치하는 명언 객체 찾기
@@ -62,7 +63,7 @@ public class WiseSayingController {
 
 	}
 
-	public void modify(Rq rq) {
+	public void modify(Rq rq) { //수정
 		int id = rq.getIntParam("id", -1);
 
 		if (id == -1) {

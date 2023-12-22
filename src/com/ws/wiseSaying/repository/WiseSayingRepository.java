@@ -7,7 +7,7 @@ import com.ws.wiseSaying.entity.WiseSaying;
 
 public class WiseSayingRepository {
 
-	private int lastWiseSayingId;
+	private int lastWiseSayingId; //프라이빗 int 라스트와이즈세잉아이디;
 	private List<WiseSaying> wiseSayings;
 
 	public WiseSayingRepository() {
