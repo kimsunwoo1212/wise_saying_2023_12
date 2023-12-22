@@ -7,11 +7,11 @@ import com.ws.Container;
 import com.ws.Rq;
 import com.ws.wiseSaying.entity.WiseSaying;
 
-public class wiseSayingService {
+public class WiseSayingService {
 	private int lastWiseSayingId;
 	private List<WiseSaying> wiseSayings;
 
-	public wiseSayingService() {
+	public WiseSayingService() {
 
 		lastWiseSayingId = 0;
 		wiseSayings = new ArrayList<>();

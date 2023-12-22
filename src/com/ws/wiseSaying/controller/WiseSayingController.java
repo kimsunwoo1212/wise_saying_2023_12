@@ -2,11 +2,15 @@ package com.ws.wiseSaying.controller;
 
 import com.ws.Container;
 import com.ws.Rq;
-import com.ws.wiseSaying.service.wiseSayingService;
+import com.ws.wiseSaying.service.WiseSayingService;
 
 public class WiseSayingController {
 
-	private wiseSayingService wiseSayingService;
+	private WiseSayingService wiseSayingService;
+
+	public WiseSayingController() {
+		wiseSayingService = new WiseSayingService();
+	}
 
 	public void write() {
 		System.out.print("명언 : ");
